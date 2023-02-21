@@ -1,0 +1,10 @@
+@use '../global/' as g;
+
+.header {
+  position: fixed;
+  z-index: 9999;
+  padding: 1rem;
+  min-height: 64px;
+  width: 100%;
+  background: g.$main_color_light;
+}

@@ -1,0 +1,13 @@
+@use '../global/' as g;
+
+.c-button {
+  padding: .25rem 1rem;
+  text-align: center;
+  background: g.$main_color_light;
+  color: g.$main_color_cont;
+  transition: 300ms;
+}
+
+.c-button:hover {
+  background: g.$main_color;
+}

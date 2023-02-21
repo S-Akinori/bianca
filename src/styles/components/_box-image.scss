@@ -1,0 +1,16 @@
+@use '../global/' as g;
+
+.c-box-image {
+  position: relative;
+}
+
+.c-box-image__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: .5rem;
+  width: 100%;
+  background: rgba($color: g.$main_color, $alpha: 0.8);
+  color: g.$main_color_cont;
+  text-align: center;
+}

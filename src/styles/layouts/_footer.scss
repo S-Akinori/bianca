@@ -1,0 +1,7 @@
+@use '../global/' as g;
+
+.footer {
+  padding: 3rem;
+  height: 300px;
+  background: g.$main_color_light;
+}
