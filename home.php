@@ -1,31 +1,19 @@
 <?php get_header(); ?>
-  <!-- <div class="c-fv p-top-fv">
-    <div class="c-fv__image p-top-fv__image"><img src="<?= get_template_directory_uri(); ?>/assets/images/fv-top.jpg" alt="オールハンドによる究極の癒しエステ" /></div>
-    <div class="c-fv__text-container ">
-      <div class="c-fv__text-container__title">オールハンドによる究極の癒しエステ</div>  
-    </div>
-    <div class="p-top-fv__owner">
-      <div class="p-top-fv__owner__image">
-        <img src="<?= get_template_directory_uri(); ?>/assets/images/owner.jpg" width="200" height="200" alt="松本 萌夏" />
-      </div>
-      <div class="p-top-fv__owner__name">
-        オーナー / 松本 萌夏
-      </div>
-    </div>
-  </div> -->
-  <div class="c-fv fv-swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide c-fv__image">
-        <img src="<?= get_template_directory_uri(); ?>/assets/images/fv-top1.jpg" alt="オールハンドによる究極の癒しエステ" />
-      </div>
-      <div class="swiper-slide c-fv__image">
-        <img src="<?= get_template_directory_uri(); ?>/assets/images/fv-top2.jpg" alt="オールハンドによる究極の癒しエステ" />
-      </div>
-      <div class="swiper-slide c-fv__image">
-        <img src="<?= get_template_directory_uri(); ?>/assets/images/fv-top3.jpg" alt="オールハンドによる究極の癒しエステ" />
+  <div class="c-fv relative">
+    <div class="fv-swiper w-full h-full">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide c-fv__image">
+          <img src="<?= get_template_directory_uri(); ?>/assets/images/fv-top1.jpg" alt="オールハンドによる究極の癒しエステ" />
+        </div>
+        <div class="swiper-slide c-fv__image">
+          <img src="<?= get_template_directory_uri(); ?>/assets/images/fv-top2.jpg" alt="オールハンドによる究極の癒しエステ" />
+        </div>
+        <div class="swiper-slide c-fv__image">
+          <img src="<?= get_template_directory_uri(); ?>/assets/images/fv-top3.jpg" alt="オールハンドによる究極の癒しエステ" />
+        </div>
       </div>
     </div>
-    <div class="c-fv__text-container ">
+    <div class="c-fv__text-container">
       <div class="c-fv__text-container__title">オールハンドによる究極の癒しエステ</div>  
     </div>
     <div class="p-top-fv__owner">
