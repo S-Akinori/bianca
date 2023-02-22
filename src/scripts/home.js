@@ -7,9 +7,11 @@ import "swiper/css/effect-fade";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { fadeIn } from './modules/fadeIn';
+import { slideShow } from './modules/slideshow';
 
 $(function() {
   fadeIn()
+  slideShow()
   const fvSwiper = new Swiper('.fv-swiper', {
     effect: "fade",
     fadeEffect: {crossFade: true},

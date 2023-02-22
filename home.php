@@ -1,17 +1,13 @@
 <?php get_header(); ?>
-  <div class="c-fv relative">
-    <div class="fv-swiper w-full h-full">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide c-fv__image">
-          <img src="<?= get_template_directory_uri(); ?>/assets/images/fv-top1.jpg" alt="オールハンドによる究極の癒しエステ" />
-        </div>
-        <div class="swiper-slide c-fv__image">
-          <img src="<?= get_template_directory_uri(); ?>/assets/images/fv-top2.jpg" alt="オールハンドによる究極の癒しエステ" />
-        </div>
-        <div class="swiper-slide c-fv__image">
-          <img src="<?= get_template_directory_uri(); ?>/assets/images/fv-top3.jpg" alt="オールハンドによる究極の癒しエステ" />
-        </div>
-      </div>
+  <div class="p-top-fv c-fv relative">
+    <div class="p-top-fv__image active c-fv__image">
+      <img src="<?= get_template_directory_uri(); ?>/assets/images/fv-top1.jpg" alt="オールハンドによる究極の癒しエステ" />
+    </div>
+    <div class="p-top-fv__image c-fv__image">
+      <img src="<?= get_template_directory_uri(); ?>/assets/images/fv-top2.jpg" alt="オールハンドによる究極の癒しエステ" />
+    </div>
+    <div class="p-top-fv__image c-fv__image">
+      <img src="<?= get_template_directory_uri(); ?>/assets/images/fv-top3.jpg" alt="オールハンドによる究極の癒しエステ" />
     </div>
     <div class="c-fv__text-container">
       <div class="c-fv__text-container__title">オールハンドによる究極の癒しエステ</div>  

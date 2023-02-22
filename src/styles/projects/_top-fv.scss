@@ -1,5 +1,16 @@
 @use '../global/' as g;
 
+.p-top-fv__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 300ms;
+  opacity: 0;
+}
+.p-top-fv__image.active {
+  opacity: 1;
+}
+
 .p-top-fv__owner {
   position: absolute;
   z-index: 10;
