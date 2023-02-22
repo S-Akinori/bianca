@@ -1,13 +1,25 @@
+@use '../global/' as g;
+
 .p-top-fv__owner {
   position: absolute;
-  right: 4rem;
-  bottom: 4rem;
+  z-index: 10;
+  right: 1rem;
+  bottom: 1rem;
+  @include g.mq('md') {
+    right: 3rem;
+    bottom: 3rem;
+  }
 }
 .p-top-fv__owner__image {
   border-radius: 50%;
   border: 4px solid var(--main-color);
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  @include g.mq('md') {
+    width: 150px;
+    height: 150px;
+  }
 }
 .p-top-fv__owner__name {
   text-align: center;

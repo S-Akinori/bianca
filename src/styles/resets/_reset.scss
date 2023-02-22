@@ -99,8 +99,16 @@ iframe {
   max-width: 100%;
 }
 
-.swiper {
-  padding: 2rem;
+.swiper-button-next, .swiper-button-prev {
+  top: auto;
+  bottom: 0;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--main-color);
+  height: auto;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-family: inherit;
+  font-size: 1rem;
 }
 
 .text {

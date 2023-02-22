@@ -1,4 +1,4 @@
-  <div class="fixed bottom-0 left-0 p-4 w-full bg-main" style="z-index: 9999;">
+  <div class="hidden fixed bottom-0 left-0 p-4 w-full bg-main" style="z-index: 9999;">
     <div class="flex">
       <a href="" class="c-button">ご予約: 000-0000-000</a>
     </div>

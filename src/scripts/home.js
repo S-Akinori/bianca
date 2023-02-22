@@ -1,13 +1,25 @@
 import $ from './jquery'
 // import Swiper JS
-import Swiper, {Navigation, Pagination, Autoplay} from 'swiper';
+import Swiper, {Navigation, Pagination, Autoplay, EffectFade} from 'swiper';
 // import Swiper styles
 import 'swiper/css';
+import "swiper/css/effect-fade";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { fadeIn } from './modules/fadeIn';
 
 $(function() {
-  console.log('hello from home page')
+  fadeIn()
+  const fvSwiper = new Swiper('.fv-swiper', {
+    effect: "fade",
+    fadeEffect: {crossFade: true},
+    modules: [EffectFade,Autoplay],
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
   const swiper = new Swiper('.swiper', {
     spaceBetween: 30,
     slidesPerView: 2,
