@@ -4,3 +4,22 @@
   padding: 3rem 1rem;
   background: g.$main_color_light;
 }
+
+.footer__top {
+  margin-bottom: 2rem;
+  @include g.mq('md') {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer__link-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.footer__link-list__item {
+  padding: .5rem;
+}
