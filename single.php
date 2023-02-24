@@ -1,8 +1,8 @@
 <?php get_header(); ?>
-<article>
-  <div class="p-6 mx-auto container">
+<article class="p-single">
+  <div class="p-4 mx-auto container">
     <div class="md:flex">
-      <div class="md:w-2/3 p-4">
+      <div class="md:w-2/3 md:p-4">
         <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
         <h1 class="text-center"><?php the_title(); ?></h1>
         <?php if(has_post_thumbnail()) : ?>
@@ -16,7 +16,7 @@
         <p><?php the_date(); ?></p>
         <?php endwhile; endif ?>
       </div>
-      <div class="md:w-1/3 p-4">
+      <div class="md:w-1/3 md:p-4">
         <?php get_sidebar(); ?>
       </div>
     </div>

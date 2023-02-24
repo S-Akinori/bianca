@@ -1,6 +1,11 @@
+@use '../global/' as g;
+
 .c-fv {
-  height: 80vh;
+  height: 40vh;
   position: relative;
+  @include g.mq('md') {
+    height: 80vh;
+  }
 }
 .c-fv__image {
   width: 100%;
@@ -28,4 +33,7 @@
   padding: 1rem;
   font-size: 2rem;
   text-align: center;
+  color: g.$main-color;
+  font-weight: bold;
+  text-shadow: 0 0 6px g.$main_color_cont;
 }

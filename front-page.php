@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php 
+  get_header();
+  $args = array(
+    'numberposts ' => 4,
+  );
+  $posts = get_posts($args);
+?>
   <div class="p-top-fv c-fv relative">
     <div class="p-top-fv__image active c-fv__image">
       <img src="<?= get_template_directory_uri(); ?>/assets/images/fv-top1.jpg" alt="オールハンドによる究極の癒しエステ" />
@@ -46,7 +52,7 @@
       <div class="p-top-features">
         <div class="p-top-features__item relative border-t border-b border-main2" style="background: url(<?= get_template_directory_uri(); ?>/assets/images/fv-top1.jpg) no-repeat left center / cover;">
           <div class="p-top-features__item__inner md:w-1/2 ml-auto">
-            <h3>マッサージ、ストレッチ、指圧を組み合わせたオールハンドエステ</h3>
+            <h3 class="p-top-features__item__inner__title">マッサージ、ストレッチ、指圧を組み合わせたオールハンドエステ</h3>
             <p>
               わたしたちは脱毛を除き機械を使用しません。肌の悩みはお客様ごとに様々で、機械で誰でも同じように施術できる形では解決できません。
             </p>
@@ -55,7 +61,7 @@
         </div>
         <div class="p-top-features__item relative border-t border-b border-main2" style="background: url(<?= get_template_directory_uri(); ?>/assets/images/menu1.jpg) no-repeat left center / cover;">
           <div class="p-top-features__item__inner md:w-1/2 ml-auto">
-            <h3>コミュニケーションを大切にしお客様に寄り添う</h3>
+            <h3 class="p-top-features__item__inner__title">コミュニケーションを大切にしお客様に寄り添う</h3>
             <p>
               お客様によって対処すべき原因は様々です。現在の症状はもちろん、症状が出るまでにどのようなことがあったかという過程も重要です。
             </p>
@@ -66,7 +72,7 @@
         </div>
         <div class="p-top-features__item relative border-t border-b border-main2" style="background: url(<?= get_template_directory_uri(); ?>/assets/images/menu2.jpg) no-repeat left center / cover;">
           <div class="p-top-features__item__inner md:w-1/2 ml-auto">
-            <h3>食事療法も取り入れ内面から美しく</h3>
+            <h3 class="p-top-features__item__inner__title">食事療法も取り入れ内面から美しく</h3>
             <p>肌荒れは内部的な原因もあります。周りの環境や食生活、ストレスなどが大きく起因することが多いです。</p>
             <p>食事療法など内面からのケアを行い、肌荒れの根本的な原因を解決します。</p>
           </div>
@@ -85,7 +91,7 @@
       <div class="md:flex">
         <div class="md:w-1/3 p-4">
           <div class="c-box-image">
-            <a href="/">
+            <a href="<?= home_url('face-care'); ?>">
               <div>
                 <img src="<?= get_template_directory_uri(); ?>/assets/images/menu1.jpg" alt="フェイシャル" />
               </div>
@@ -195,7 +201,7 @@
         </div>
       </div>
       <div class="flex flex-wrap bg-main2">
-        <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+        <?php foreach($posts as $post): setup_postdata($post); ?>
         <div class="md:w-1/2 p-4">
           <a href="<?php the_permalink() ?>" class="block h-full">
             <div class="aspect-video">
@@ -203,11 +209,11 @@
             </div>
             <div class="p-4 bg-white">
               <span><?php the_date() ?></span>
-              <h3><?= esc_html(get_the_excerpt()); ?></h3>
+              <h3 class=""><?= esc_html(get_the_excerpt()); ?></h3>
             </div>
           </a>
         </div>
-        <?php endwhile; endif; ?>
+        <?php endforeach; wp_reset_postdata(); ?>
       </div>
     </section>
   </div>

@@ -10,12 +10,15 @@
       <div class="c-logo mx-auto md:ml-0 md:mr-auto mb-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.jpg" alt=""></div>
       <div class="text-center md:text-left">000-000 東京都港区0-00-0</div>
     </div>
-    <div class="footer__link-list">
-      <a href="" class="footer__link-list__item">リンクテキスト</a>
-      <a href="" class="footer__link-list__item">リンクテキスト</a>
-      <a href="" class="footer__link-list__item">リンクテキスト</a>
-      <a href="" class="footer__link-list__item">リンクテキスト</a>
-      <a href="" class="footer__link-list__item">リンクテキスト</a>
+    <div>
+      <ul class="footer__link-list">
+        <li class="footer__link-list__item"><a class="js-anchorLink" href="#topMessage">メッセージ</a></li>
+        <li class="footer__link-list__item"><a class="js-anchorLink" href="#topFeatures">3つの特徴</a></li>
+        <li class="footer__link-list__item"><a class="js-anchorLink" href="#topMenu">メニュー</a></li>
+        <li class="footer__link-list__item"><a class="js-anchorLink" href="#topReview">お客様の声</a></li>
+        <li class="footer__link-list__item"><a class="js-anchorLink" href="#topBlog">ブログ</a></li>
+        <li class="footer__link-list__item"><a class="js-anchorLink" href="#topContact">サロン情報</a></li>
+      </ul>
     </div>
     <div class="text-center text-sm">&copy;2023 エステNEXUS</div>
   </div>

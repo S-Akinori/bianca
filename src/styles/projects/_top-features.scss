@@ -7,3 +7,8 @@
   background: rgba($color: g.$main_color2, $alpha: 0.7);
   padding: 3rem 1rem;
 }
+
+.p-top-features__item__inner__title {
+  color: g.$main_color;
+  text-shadow: 0 0 6px g.$main_color_cont;
+}

@@ -34,9 +34,9 @@
           </ul>
         </nav>
       </div>
-      <div class="flex">
-        <a href="" class="c-button">ご予約: 000-0000-000</a>
-        <div class="lg:hidden">
+      <div class="flex items-center">
+        <a href="" class="c-button text-sm">ご予約: 000-0000-000</a>
+        <div class="lg:hidden pl-2">
           <button class="js-menu-button flex items-center justify-center">
             <span class="material-icons">
               menu
@@ -47,17 +47,23 @@
     </div>
   </header>
   <div id="jsNav" class="l-nav-container">
-    <button class="js-menu-button absolute right-16 top-16 flex items-center justify-center">
-      <span class="material-icons text-gray-400">close</span>
-    </button>
-    <nav>
-      <ul>
-        <li><a href="">Link</a></li>
-        <li><a href="">Link</a></li>
-        <li><a href="">Link</a></li>
-        <li><a href="">Link</a></li>
-        <li><a href="">Link</a></li>
-      </ul>
-    </nav>
+    <div class="relative">
+      <button class="js-menu-button absolute right-0 top-0 flex items-center justify-center">
+        <span class="material-icons text-main">close</span>
+      </button>
+      <nav class="mb-4">
+        <ul>
+          <li class="px-2 text-sm text-center"><a class="js-anchorLink js-menu-button" href="#topMessage">メッセージ</a></li>
+          <li class="px-2 text-sm text-center"><a class="js-anchorLink js-menu-button" href="#topFeatures">3つの特徴</a></li>
+          <li class="px-2 text-sm text-center"><a class="js-anchorLink js-menu-button" href="#topMenu">メニュー</a></li>
+          <li class="px-2 text-sm text-center"><a class="js-anchorLink js-menu-button" href="#topReview">お客様の声</a></li>
+          <li class="px-2 text-sm text-center"><a class="js-anchorLink js-menu-button" href="#topBlog">ブログ</a></li>
+          <li class="px-2 text-sm text-center"><a class="js-anchorLink js-menu-button" href="#topContact">サロン情報</a></li>
+        </ul>
+      </nav>
+      <div class="text-center">
+        <a href="" class="c-button">ご予約: 000-0000-000</a>
+      </div>
+    </div>
   </div>
   <main>

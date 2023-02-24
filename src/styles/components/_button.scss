@@ -1,6 +1,7 @@
 @use '../global/' as g;
 
 .c-button {
+  display: inline-block;
   padding: 1rem 1rem;
   text-align: center;
   background: g.$main_color_light;
