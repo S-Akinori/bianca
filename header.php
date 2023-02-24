@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>エステNEXUS</title>
   <meta property="og:title" content="エステNEXUS" />
   <meta property="og:description" content="エステNEXUSのホームページです" />
   <meta property="og:type" content="website" />
@@ -22,11 +22,28 @@
   <header class="header">
     <div class="flex justify-between items-center">
       <div class="c-logo"><a href="<?= home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.jpg" alt=""></a></div>
-      <button class="js-menu-button flex items-center justify-center">
-        <span class="material-icons">
-          menu
-        </span>
-      </button>
+      <div class="hidden lg:block">
+        <nav>
+          <ul class="flex">
+            <li class="px-2 text-sm"><a class="js-anchorLink" href="#topMessage">メッセージ</a></li>
+            <li class="px-2 text-sm"><a class="js-anchorLink" href="#topFeatures">3つの特徴</a></li>
+            <li class="px-2 text-sm"><a class="js-anchorLink" href="#topMenu">メニュー</a></li>
+            <li class="px-2 text-sm"><a class="js-anchorLink" href="#topReview">お客様の声</a></li>
+            <li class="px-2 text-sm"><a class="js-anchorLink" href="#topBlog">ブログ</a></li>
+            <li class="px-2 text-sm"><a class="js-anchorLink" href="#topContact">サロン情報</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex">
+        <a href="" class="c-button">ご予約: 000-0000-000</a>
+        <div class="lg:hidden">
+          <button class="js-menu-button flex items-center justify-center">
+            <span class="material-icons">
+              menu
+            </span>
+          </button>
+        </div>
+      </div>
     </div>
   </header>
   <div id="jsNav" class="l-nav-container">

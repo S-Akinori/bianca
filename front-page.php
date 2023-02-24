@@ -21,7 +21,7 @@
       </div>
     </div>
   </div>
-  <div class="c-page-section c-container">
+  <div id="topMessage" class="c-page-section c-container">
     <section>
       <div class="c-title-text">
         <div class="text-center c-fade-in">
@@ -35,7 +35,7 @@
       </div>
     </section>
   </div>
-  <div class="c-page-section">
+  <div id="topFeatures" class="c-page-section">
     <section>
       <div class="c-title-text">
         <div class="text-center c-fade-in">
@@ -74,7 +74,7 @@
       </div>
     </section>
   </div>
-  <div class="c-page-section c-container">
+  <div id="topMenu" class="c-page-section c-container">
     <section>
       <div class="c-title-text c-fade-in">
         <div class="text-center">
@@ -125,7 +125,7 @@
       </div>
     </section>
   </div>
-  <div class="c-page-section c-container relative">
+  <div id="topReview" class="c-page-section c-container relative">
     <section>
       <div class="c-title-text c-fade-in">
         <div class="text-center">
@@ -186,7 +186,7 @@
       <div class="swiper-button-next"></div>
     </section>
   </div>
-  <div class="c-page-section c-container relative">
+  <div id="topBlog" class="c-page-section c-container relative">
     <section>
       <div class="c-title-text">
         <div class="text-center">
@@ -195,46 +195,23 @@
         </div>
       </div>
       <div class="flex flex-wrap bg-main2">
+        <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
         <div class="md:w-1/2 p-4">
-          <a href="" class="block">
-            <div class="aspect-video"><img class="object-cover w-full h-full" src="<?= get_template_directory_uri(); ?>/assets/images/no-image.jpg" /></div>
+          <a href="<?php the_permalink() ?>" class="block h-full">
+            <div class="aspect-video">
+              <img class="object-cover w-full h-full" src="<?= has_post_thumbnail() ? get_the_post_thumbnail_url('', 'full') : get_template_directory_uri() . '/assets/images/no-image.jpg' ?>" width="1200" height="800" alt="<?php the_title(); ?>">  
+            </div>
             <div class="p-4 bg-white">
-              <span>2023.2.22</span>
-              <h3>ブログタイトル</h3>
+              <span><?php the_date() ?></span>
+              <h3><?= esc_html(get_the_excerpt()); ?></h3>
             </div>
           </a>
         </div>
-        <div class="md:w-1/2 p-4">
-          <a href="" class="block">
-            <div class="aspect-video"><img class="object-cover w-full h-full" src="<?= get_template_directory_uri(); ?>/assets/images/no-image.jpg" /></div>
-            <div class="p-4 bg-white">
-              <span>2023.2.22</span>
-              <h3>ブログタイトル</h3>
-            </div>
-          </a>
-        </div>
-        <div class="md:w-1/2 p-4">
-          <a href="" class="block">
-            <div class="aspect-video"><img class="object-cover w-full h-full" src="<?= get_template_directory_uri(); ?>/assets/images/no-image.jpg" /></div>
-            <div class="p-4 bg-white">
-              <span>2023.2.22</span>
-              <h3>ブログタイトル</h3>
-            </div>
-          </a>
-        </div>
-        <div class="md:w-1/2 p-4">
-          <a href="" class="block">
-            <div class="aspect-video"><img class="object-cover w-full h-full" src="<?= get_template_directory_uri(); ?>/assets/images/no-image.jpg" /></div>
-            <div class="p-4 bg-white">
-              <span>2023.2.22</span>
-              <h3>ブログタイトル</h3>
-            </div>
-          </a>
-        </div>
+        <?php endwhile; endif; ?>
       </div>
     </section>
   </div>
-  <div class="c-page-section c-container relative">
+  <div id="topContact" class="c-page-section c-container relative">
     <section>
       <div class="c-title-text">
         <div class="text-center">

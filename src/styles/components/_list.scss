@@ -1,7 +1,9 @@
+@use '../global/' as g;
+
 .c-list__item {
   position: relative;
   padding: 1rem 0;
-  border-bottom: 1px solid var(--main-color);
+  border-bottom: 1px solid g.$main_color2;
 }
 
 .c-list__item:has(.c-list__item__link)::after {

@@ -8,10 +8,12 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { fadeIn } from './modules/fadeIn';
 import { slideShow } from './modules/slideshow';
+import { smoothScroll } from './modules/smoothScroll';
 
 $(function() {
   fadeIn()
   slideShow()
+  smoothScroll()
   const fvSwiper = new Swiper('.fv-swiper', {
     effect: "fade",
     fadeEffect: {crossFade: true},

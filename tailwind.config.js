@@ -9,11 +9,12 @@ module.exports = {
     colors: {
       'base': '#F6F6F6',
       'base-color': '#F6F6F6',
-      'base-cont': '#080D1B',
+      'base-cont': '#222',
       'main': '#197DBB',
       'main2': '#fbe5e7',
       'main-light': '#4BAAE0',
       'main-cont': '#F6F6F6',
+      'main-cont2': '#222',
       'accent': '#A69463',
       'accent-cont': '#FFF',
     },
