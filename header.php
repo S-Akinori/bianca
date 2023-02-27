@@ -35,7 +35,7 @@
         </nav>
       </div>
       <div class="flex items-center">
-        <a href="" class="c-button text-sm">ご予約: 000-0000-000</a>
+      <a href="tel:08074009710" class="c-button text-sm">ご予約：080-7400-9710</a>
         <div class="lg:hidden pl-2">
           <button class="js-menu-button flex items-center justify-center">
             <span class="material-icons">
@@ -62,7 +62,7 @@
         </ul>
       </nav>
       <div class="text-center">
-        <a href="" class="c-button">ご予約: 000-0000-000</a>
+        <a href="tel:08074009710" class="c-button">ご予約：080-7400-9710</a>
       </div>
     </div>
   </div>

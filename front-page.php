@@ -226,7 +226,7 @@
         </div>
       </div>
       <div class="md:flex">
-        <div class="md:w-1/2 mb-4 md:mb-0 md:px-4"><iframe class="w-full h-full object-cover" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d529.282541540753!2d139.73235713887905!3d35.6629451419601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b826ae3281d%3A0xf2a258ed2d09f4e!2sRoppongi%20Sta.!5e0!3m2!1sen!2sjp!4v1676967688067!5m2!1sen!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="md:w-1/2 mb-4 md:mb-0 md:px-4"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.948308359583!2d139.7328464152152!3d35.65364518020082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ba1b13b8ded%3A0xaa439db0345efd4a!2z44CSMTA2LTAwNDUgVG9reW8sIE1pbmF0byBDaXR5LCBBemFidWrFq2JhbiwgMy1jaMWNbWXiiJI34oiSNSDjg57jgrnjgrPjg5Pjg6vpurvluIPlvJDnlarppKggMzAx!5e0!3m2!1sen!2sjp!4v1677480582714!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         <div class="md:w-1/2 md:px-4">
           <h3 class="text-main">エステNEXUS</h3>
           <div class="md:flex mb-4 pb-4 border-b border-main">
@@ -235,22 +235,34 @@
           </div>
           <div class="md:flex mb-4 pb-4 border-b border-main">
             <div class="w-32 pr-4">電話番号</div>
-            <div>000-0000-000</div>
+            <div>080-7400-9710</div>
+          </div>
+          <div class="md:flex mb-4 pb-4 border-b border-main">
+            <div class="w-32 pr-4">住所</div>
+            <div>
+              〒106-0045<br />
+              東京都港区麻布十番3丁目7-5 マスコビル弐番館301号室
+            </div>
           </div>
           <div class="md:flex mb-4 pb-4 border-b border-main">
             <div class="w-32 pr-4">営業時間</div>
             <div>11:00～18:00</div>
           </div>
-          <div class="md:flex mb-4 pb-4 border-b border-main">
+          <!-- <div class="md:flex mb-4 pb-4 border-b border-main">
             <div class="w-32 pr-4">定休日</div>
             <div>月曜日</div>
+          </div> -->
+          <div class="text-sm">
+            麻布十番駅1番出口を出て、きらぼし銀行が目の前にあるので、その手前を右折し、直進します。<br />
+            2個めの十字路(ひかり鶏という居酒屋さんが右手に見える所)が出てきますので、そこを渡り左へ直進します。<br />
+            右手に階段(あさごやという飲食店さんが一階にございます)が出てきますので、そこを上がっていただき、3階301号室となります。
           </div>
         </div>
       </div>
     </section>
     <div class="c-page-section c-container relative">
       <div class="text-center">
-        <a href="" class="c-button">ご予約：000-0000-000</a>
+        <a href="tel:08074009710" class="c-button">ご予約：080-7400-9710</a>
       </div>
     </div>
   </div>
