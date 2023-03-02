@@ -1,5 +1,8 @@
 @use '../global/' as g;
 
+.p-top-fv {
+  height: 80vh;
+}
 .p-top-fv__image {
   position: absolute;
   left: 0;
