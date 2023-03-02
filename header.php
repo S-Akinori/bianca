@@ -13,8 +13,8 @@
   <meta property="og:locale" content="ja_JP"  />
   <!-- <link rel="icon" href="/favicon.ico" /> -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="<?php echo get_template_directory_uri(); ?>/assets/styles/tw.css" rel="stylesheet">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/styles/index.css">
+  <link href="<?php echo get_template_directory_uri(); ?>/assets/styles/tw.css?v=1" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/styles/index.css?v=1">
   <?php wp_enqueue_script('jquery'); ?>
 	<?php wp_head(); ?>
 </head>
