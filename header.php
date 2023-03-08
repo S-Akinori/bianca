@@ -21,7 +21,7 @@
 <body>
   <header class="header">
     <div class="flex justify-between items-center">
-      <div class="c-logo"><a href="<?= home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.jpg" alt=""></a></div>
+      <div class="c-logo"><a href="<?= home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt=""></a></div>
       <div class="hidden lg:block">
         <nav>
           <ul class="flex">
@@ -35,7 +35,7 @@
         </nav>
       </div>
       <div class="flex items-center">
-      <a href="tel:08074009710" class="c-button text-sm">ご予約：080-7400-9710</a>
+      <a href="tel:<?= get_option('company_tel'); ?>" class="c-button text-sm">ご予約：<?= get_option('company_tel'); ?></a>
         <div class="lg:hidden pl-2">
           <button class="js-menu-button flex items-center justify-center">
             <span class="material-icons">
@@ -62,7 +62,7 @@
         </ul>
       </nav>
       <div class="text-center">
-        <a href="tel:08074009710" class="c-button">ご予約：080-7400-9710</a>
+        <a href="tel:<?= get_option('company_tel'); ?>" class="c-button">ご予約：<?= get_option('company_tel'); ?></a>
       </div>
     </div>
   </div>
