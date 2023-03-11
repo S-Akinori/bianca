@@ -32,44 +32,52 @@
         <td><?php generate_upload_image_tag('company_logo', get_option('company_logo'));?></td>
       </tr>
       <tr>
-        <th scope="row"><label for="company_tel">電話番号</label></th>
-        <td><input name="company_tel" type="text" id="company_tel" value="<?php form_option( 'company_tel' ); ?>" class="regular-text" /></td>
+        <th scope="row"><label for="company_logo">代表写真</label></th>
+        <td><?php generate_upload_image_tag('company_CEO_image', get_option('company_CEO_image'));?></td>
       </tr>
       <tr>
         <th scope="row"><label for="company_map">Google Map(埋め込みコードを入力)</label></th>
         <td><textarea name="company_map" type="text" id="company_map" class="regular-text"><?php form_option( 'company_map' ); ?></textarea></td>
       </tr>
       <tr>
-        <th><label for="company_info_title_1">項目1タイトル</label></th>
-        <td colspan="2"><input name="company_info_title_1" type="text" id="company_info_title_1" value="<?php form_option( 'company_info_title_1' ); ?>" class="regular-text" /></td>
+        <th><label for="company_CEO_title">代表ラベル</label></th>
+        <td colspan="2"><input name="company_CEO_title" type="text" id="company_CEO_title" value="<?php form_option( 'company_CEO_title' ); ?>" class="regular-text" /></td>
       </tr>
       <tr>
-        <th><label for="company_info_text_1">項目1テキスト</label></th>
-        <td colspan="2"><input name="company_info_text_1" type="text" id="company_info_text_1" value="<?php form_option( 'company_info_text_1' ); ?>" class="regular-text" /></td>
+        <th scope="row"><label for="company_CEO">代表</label></th>
+        <td><input name="company_CEO" type="text" id="company_CEO" value="<?php form_option( 'company_CEO' ); ?>" class="regular-text" /></td>
       </tr>
       <tr>
-        <th><label for="company_info_title_2">項目2タイトル</label></th>
-        <td colspan="2"><input name="company_info_title_2" type="text" id="company_info_title_2" value="<?php form_option( 'company_info_title_2' ); ?>" class="regular-text" /></td>
+        <th><label for="company_tel_title">電話番号ラベル</label></th>
+        <td colspan="2"><input name="company_tel_title" type="text" id="company_tel_title" value="<?php form_option( 'company_tel_title' ); ?>" class="regular-text" /></td>
       </tr>
       <tr>
-        <th><label for="company_info_text_2">項目2テキスト</label></th>
-        <td colspan="2"><input name="company_info_text_2" type="text" id="company_info_text_2" value="<?php form_option( 'company_info_text_2' ); ?>" class="regular-text" /></td>
+        <th scope="row"><label for="company_tel">電話番号</label></th>
+        <td><input name="company_tel" type="text" id="company_tel" value="<?php form_option( 'company_tel' ); ?>" class="regular-text" /></td>
       </tr>
       <tr>
-        <th><label for="company_info_title_3">項目3タイトル</label></th>
-        <td colspan="2"><input name="company_info_title_3" type="text" id="company_info_title_3" value="<?php form_option( 'company_info_title_3' ); ?>" class="regular-text" /></td>
+        <th><label for="company_tel_title">営業時間ラベル</label></th>
+        <td colspan="2"><input name="company_hours_title" type="text" id="company_hours_title" value="<?php form_option( 'company_hours_title' ); ?>" class="regular-text" /></td>
       </tr>
       <tr>
-        <th><label for="company_info_text_3">項目3テキスト</label></th>
-        <td colspan="2"><input name="company_info_text_3" type="text" id="company_info_text_3" value="<?php form_option( 'company_info_text_3' ); ?>" class="regular-text" /></td>
+        <th scope="row"><label for="company_hours">営業時間</label></th>
+        <td><textarea name="company_hours" id="company_hours" class="regular-text"><?php form_option( 'company_hours' ); ?></textarea></td>
       </tr>
       <tr>
-        <th><label for="company_info_title_4">項目4タイトル</label></th>
-        <td colspan="2"><input name="company_info_title_4" type="text" id="company_info_title_4" value="<?php form_option( 'company_info_title_4' ); ?>" class="regular-text" /></td>
+        <th><label for="company_tel_title">住所ラベル</label></th>
+        <td colspan="2"><input name="company_address_title" type="text" id="company_address_title" value="<?php form_option('company_address_title'); ?>" class="regular-text" /></td>
       </tr>
       <tr>
-        <th><label for="company_info_text_4">項目4テキスト</label></th>
-        <td colspan="2"><input name="company_info_text_4" type="text" id="company_info_text_4" value="<?php form_option( 'company_info_text_4' ); ?>" class="regular-text" /></td>
+        <th scope="row"><label for="company_address">住所</label></th>
+        <td><textarea name="company_address" id="company_address" class="regular-text"><?php form_option('company_address'); ?></textarea></td>
+      </tr>
+      <tr>
+        <th><label for="company_tel_title">定休日ラベル</label></th>
+        <td colspan="2"><input name="company_dayoff_title" type="text" id="company_dayoff_title" value="<?php form_option( 'company_dayoff_title' ); ?>" class="regular-text" /></td>
+      </tr>
+      <tr>
+        <th scope="row"><label for="company_dayoff">定休日</label></th>
+        <td><input name="company_dayoff" type="text" id="company_dayoff" value="<?php form_option( 'company_dayoff' ); ?>" class="regular-text" /></td>
       </tr>
       <tr>
         <th><label for="company_info_sub">備考</label></th>
@@ -94,16 +102,18 @@
   function register_company_setting() {
     register_setting('company_settings_group', 'company_name');
     register_setting('company_settings_group', 'company_logo');
+    register_setting('company_settings_group', 'company_CEO_image');
+    register_setting('company_settings_group', 'company_tel_title');
     register_setting('company_settings_group', 'company_tel');
+    register_setting('company_settings_group', 'company_CEO_title');
+    register_setting('company_settings_group', 'company_CEO');
+    register_setting('company_settings_group', 'company_hours_title');
+    register_setting('company_settings_group', 'company_hours');
+    register_setting('company_settings_group', 'company_address_title');
+    register_setting('company_settings_group', 'company_address');
+    register_setting('company_settings_group', 'company_dayoff_title');
+    register_setting('company_settings_group', 'company_dayoff');
     register_setting('company_settings_group', 'company_map');
-    register_setting('company_settings_group', 'company_info_title_1');
-    register_setting('company_settings_group', 'company_info_text_1');
-    register_setting('company_settings_group', 'company_info_title_2');
-    register_setting('company_settings_group', 'company_info_text_2');
-    register_setting('company_settings_group', 'company_info_title_3');
-    register_setting('company_settings_group', 'company_info_text_3');
-    register_setting('company_settings_group', 'company_info_title_4');
-    register_setting('company_settings_group', 'company_info_text_4');
     register_setting('company_settings_group', 'company_info_sub');
     
   }

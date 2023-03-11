@@ -8,10 +8,7 @@
   <div class="c-container mx-auto">
     <div class="footer__top">
       <div class="c-logo mx-auto md:ml-0 md:mr-auto mb-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt=""></div>
-      <div class="text-center md:text-left">
-        〒106-0045<br />
-        東京都港区麻布十番3丁目7-5 マスコビル弐番館301号室
-      </div>
+      <div class="text-center md:text-left whitespace-pre-wrap"><?= get_option('company_address'); ?></div>
     </div>
     <div>
       <ul class="footer__link-list">

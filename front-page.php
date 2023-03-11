@@ -28,10 +28,10 @@
     </div>
     <div class="p-top-fv__owner">
       <div class="p-top-fv__owner__image">
-        <img src="<?= get_template_directory_uri(); ?>/assets/images/owner.jpg" width="200" height="200" alt="松本 萌夏" />
+        <img src="<?= get_option('company_CEO_image'); ?>" width="200" height="200" alt="<?= get_option('company_CEO'); ?>" />
       </div>
       <div class="p-top-fv__owner__name">
-        オーナー / 松本 萌夏
+        <?= get_option('company_CEO_title'); ?> / <?= get_option('company_CEO'); ?>
       </div>
     </div>
   </div>
@@ -186,12 +186,28 @@
         <div class="md:w-1/2 mb-4 md:mb-0 md:px-4"><?= get_option('company_map'); ?></div>
         <div class="md:w-1/2 md:px-4">
           <h3 class="text-main"><?= get_option('company_name'); ?></h3>
-          <?php for($i=1; $i<=4; $i++) : ?>
-          <div class="md:flex mb-4 pb-4 border-b border-main2">
-            <div class="w-32 pr-4"><?= get_option('company_info_title_' . $i); ?></div>
-            <div><?= get_option('company_info_text_' . $i); ?></div>
+          <div>
+            <div class="md:flex mb-4 pb-4 border-b border-main2">
+              <div class="w-32 pr-4"><?= get_option('company_CEO_title'); ?></div>
+              <div class="whitespace-pre-wrap"><?= get_option('company_CEO'); ?></div>
+            </div>
+            <div class="md:flex mb-4 pb-4 border-b border-main2">
+              <div class="w-32 pr-4"><?= get_option('company_tel_title'); ?></div>
+              <div class="whitespace-pre-wrap"><?= get_option('company_tel'); ?></div>
+            </div>
+            <div class="md:flex mb-4 pb-4 border-b border-main2">
+              <div class="w-32 pr-4"><?= get_option('company_address_title'); ?></div>
+              <div class="whitespace-pre-wrap"><?= get_option('company_address'); ?></div>
+            </div>
+            <div class="md:flex mb-4 pb-4 border-b border-main2">
+              <div class="w-32 pr-4"><?= get_option('company_hours_title'); ?></div>
+              <div class="whitespace-pre-wrap"><?= get_option('company_hours'); ?></div>
+            </div>
+            <div class="md:flex mb-4 pb-4 border-b border-main2">
+              <div class="w-32 pr-4"><?= get_option('company_dayoff_title'); ?></div>
+              <div class="whitespace-pre-wrap"><?= get_option('company_dayoff'); ?></div>
+            </div>
           </div>
-          <?php endfor; ?>
           <div class="text-sm">
             <?= get_option('company_info_sub'); ?>
           </div>
