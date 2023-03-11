@@ -33,7 +33,7 @@ function create_posttype(){
         'excerpt',
       ),
       'show_in_rest' => true,
-      'taxonomies' => array('menus_cat')
+      'taxonomies' => array('menus-cat')
     )
   );
   register_taxonomy(

@@ -23,7 +23,7 @@
         <li class="footer__link-list__item"><a class="js-anchorLink" href="#topContact">サロン情報</a></li>
       </ul>
     </div>
-    <div class="text-center text-sm">&copy;2023 エステNEXUS</div>
+    <div class="text-center text-sm">&copy;2023 <?= get_option('company_name'); ?></div>
   </div>
 </footer>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/main.js"></script>

@@ -15,13 +15,13 @@
 ?>
   <div class="p-top-fv c-fv relative">
     <div class="p-top-fv__image active c-fv__image">
-      <img src="<?= get_option('top_fv_image1') ;?>" alt="オールハンドによる究極の癒しエステ" />
+      <img src="<?= get_option('top_fv_image1') ;?>" alt="<?= get_option('top_fv_text') ;?>" />
     </div>
     <div class="p-top-fv__image c-fv__image">
-      <img src="<?= get_option('top_fv_image2') ;?>" alt="オールハンドによる究極の癒しエステ" />
+      <img src="<?= get_option('top_fv_image2') ;?>" alt="<?= get_option('top_fv_text') ;?>" />
     </div>
     <div class="p-top-fv__image c-fv__image">
-      <img src="<?= get_option('top_fv_image3') ;?>" alt="オールハンドによる究極の癒しエステ" />
+      <img src="<?= get_option('top_fv_image3') ;?>" alt="<?= get_option('top_fv_text') ;?>" />
     </div>
     <div class="c-fv__text-container">
       <div class="c-fv__text-container__title"><?= get_option('top_fv_text') ;?></div>  
@@ -57,19 +57,19 @@
         </div>
       </div>
       <div class="p-top-features">
-        <div class="p-top-features__item relative border-t border-b border-main2" style="background: url(<?= get_option('top_feature1_image'); ?>) no-repeat left center / cover;">
+        <div class="p-top-features__item c-fade-in relative border-t border-b border-main2" style="background: url(<?= get_option('top_feature1_image'); ?>) no-repeat left center / cover;">
           <div class="p-top-features__item__inner md:w-1/2 ml-auto">
             <h3 class="p-top-features__item__inner__title"><?= get_option('top_feature1_title'); ?></h3>
             <?= get_option('top_feature1_text'); ?>
           </div>
         </div>
-        <div class="p-top-features__item relative border-t border-b border-main2" style="background: url(<?= get_option('top_feature2_image'); ?>) no-repeat left center / cover;">
+        <div class="p-top-features__item c-fade-in relative border-t border-b border-main2" style="background: url(<?= get_option('top_feature2_image'); ?>) no-repeat left center / cover;">
           <div class="p-top-features__item__inner md:w-1/2 ml-auto">
             <h3 class="p-top-features__item__inner__title"><?= get_option('top_feature2_title'); ?></h3>
             <?= get_option('top_feature2_text'); ?>
           </div>
         </div>
-        <div class="p-top-features__item relative border-t border-b border-main2" style="background: url(<?= get_option('top_feature3_image'); ?>) no-repeat left center / cover;">
+        <div class="p-top-features__item c-fade-in relative border-t border-b border-main2" style="background: url(<?= get_option('top_feature3_image'); ?>) no-repeat left center / cover;">
           <div class="p-top-features__item__inner md:w-1/2 ml-auto">
             <h3 class="p-top-features__item__inner__title"><?= get_option('top_feature3_title'); ?></h3>
             <?= get_option('top_feature3_text'); ?>
@@ -97,15 +97,18 @@
               <ul class="c-list">
                 <?php 
                   $menu_args = array(
-                    'numberposts' => 4,
                     'post_type' => 'menus',
                     'tax_query' => array(
-                      'field'=>'term_id',
-                      'terms'=>$category->term_id
+                      array(
+                        'taxonomy' => 'menus-cat',
+                        'field'=>'term_id',
+                        'terms'=>$category->term_id, 
+                      )
                     )
                   );
                   $menu_posts = get_posts($menu_args);
-                  foreach($menu_posts as $post): setup_postdata($post);
+                  foreach($menu_posts as $post):
+                  setup_postdata($post);
                 ?>
                   <li class="c-list__item c-list__item--main-light flex justify-between"><span><?php the_title(); ?></span> <span><?php the_field('price'); ?></span></li>
                 <?php endforeach; wp_reset_postdata(); ?>
@@ -148,13 +151,13 @@
   </div>
   <div id="topBlog" class="c-page-section c-container relative">
     <section>
-      <div class="c-title-text">
+      <div class="c-title-text c-fade-in">
         <div class="text-center">
           <span class="text-sm text-main">Blog</span>
           <h2 class="c-title-text__title u-text-center">スタッフブログ</h2>
         </div>
       </div>
-      <div class="flex flex-wrap bg-main2">
+      <div class="flex flex-wrap bg-main2 c-fade-in">
         <?php foreach($posts as $post): setup_postdata($post); ?>
         <div class="md:w-1/2 p-4">
           <a href="<?php the_permalink() ?>" class="block h-full">
@@ -173,13 +176,13 @@
   </div>
   <div id="topContact" class="c-page-section c-container relative">
     <section>
-      <div class="c-title-text">
+      <div class="c-title-text c-fade-in">
         <div class="text-center">
           <span class="text-sm text-main">Contact</span>
           <h2 class="c-title-text__title u-text-center">エステ情報</h2>
         </div>
       </div>
-      <div class="md:flex">
+      <div class="md:flex c-fade-in">
         <div class="md:w-1/2 mb-4 md:mb-0 md:px-4"><?= get_option('company_map'); ?></div>
         <div class="md:w-1/2 md:px-4">
           <h3 class="text-main"><?= get_option('company_name'); ?></h3>
