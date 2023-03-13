@@ -12,6 +12,12 @@
   $review_posts = get_posts($review_args);
 
   $menu_categories = get_terms('menus-cat');
+
+  $news_args = array(
+    'numberposts' => 4,
+    'post_type' => 'news'
+  );
+  $news_posts = get_posts($news_args);
 ?>
   <div class="p-top-fv c-fv relative">
     <div class="p-top-fv__image active c-fv__image">
@@ -94,6 +100,7 @@
             </div>
             <div class="p-4 md:w-1/2 bg-main2">
               <div class="text-xl text-main mb-4"><?= $category->name; ?></div>
+              <div><?= $category->description; ?></div>
               <ul class="c-list">
                 <?php 
                   $menu_args = array(
@@ -149,30 +156,52 @@
       <div class="swiper-button-next"></div>
     </section>
   </div>
-  <div id="topBlog" class="c-page-section c-container relative">
-    <section>
-      <div class="c-title-text c-fade-in">
-        <div class="text-center">
-          <span class="text-sm text-main">Blog</span>
-          <h2 class="c-title-text__title u-text-center">スタッフブログ</h2>
+  <div class="md:flex c-page-section c-container">
+    <div id="topBlog" class="mb-8 md:mb-0 pr-2 md:w-1/2 relative">
+      <section>
+        <div class="c-title-text c-fade-in">
+          <div class="text-center">
+            <span class="text-sm text-main">Blog</span>
+            <h2 class="c-title-text__title u-text-center">オーナー日記</h2>
+          </div>
         </div>
-      </div>
-      <div class="flex flex-wrap bg-main2 c-fade-in">
-        <?php foreach($posts as $post): setup_postdata($post); ?>
-        <div class="md:w-1/2 p-4">
-          <a href="<?php the_permalink() ?>" class="block h-full">
-            <div class="aspect-video">
-              <img class="object-cover w-full h-full" src="<?= has_post_thumbnail() ? get_the_post_thumbnail_url('', 'full') : get_template_directory_uri() . '/assets/images/no-image.jpg' ?>" width="1200" height="800" alt="<?php the_title(); ?>">  
-            </div>
-            <div class="p-4 bg-white">
-              <span><?php the_date() ?></span>
-              <h3 class=""><?= esc_html(get_the_excerpt()); ?></h3>
-            </div>
-          </a>
+        <div class="bg-main2 c-fade-in">
+          <?php foreach($posts as $post): setup_postdata($post); ?>
+          <div class="p-4">
+            <a href="<?php the_permalink() ?>" class="flex">
+              <div class="w-32 aspect-video">
+                <img class="object-cover w-full h-full" src="<?= has_post_thumbnail() ? get_the_post_thumbnail_url('', 'full') : get_template_directory_uri() . '/assets/images/no-image.jpg' ?>" width="1200" height="800" alt="<?php the_title(); ?>">  
+              </div>
+              <div class="w-full p-4 bg-white">
+                <span class="text-sm"><?= get_the_date() ?></span>
+                <h3 class="text-[1rem]"><?= esc_html(get_the_excerpt()); ?></h3>
+              </div>
+            </a>
+          </div>
+          <?php endforeach; wp_reset_postdata(); ?>
         </div>
-        <?php endforeach; wp_reset_postdata(); ?>
-      </div>
-    </section>
+      </section>
+    </div>
+    <div id="topNews" class="pl-2 md:w-1/2 relative">
+      <section>
+        <div class="c-title-text c-fade-in">
+          <div class="text-center">
+            <span class="text-sm text-main">News</span>
+            <h2 class="c-title-text__title u-text-center">ニュース</h2>
+          </div>
+        </div>
+        <div class="c-fade-in">
+          <?php foreach($news_posts as $post): setup_postdata($post); ?>
+          <div class="p-4 border-b border-main">
+            <a href="<?php the_permalink() ?>" class="block h-full">
+              <span class="text-sm"><?= get_the_date() ?></span>
+              <h3 class="mb-0 pb-0 text-[1rem]"><?php the_title(); ?></h3>
+            </a>
+          </div>
+          <?php endforeach; wp_reset_postdata(); ?>
+        </div>
+      </section>
+    </div>
   </div>
   <div id="topContact" class="c-page-section c-container relative">
     <section>
