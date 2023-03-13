@@ -12,12 +12,12 @@
     </div>
     <div>
       <ul class="footer__link-list">
-        <li class="footer__link-list__item"><a class="js-anchorLink" href="#topMessage">メッセージ</a></li>
-        <li class="footer__link-list__item"><a class="js-anchorLink" href="#topFeatures">3つの特徴</a></li>
-        <li class="footer__link-list__item"><a class="js-anchorLink" href="#topMenu">メニュー</a></li>
-        <li class="footer__link-list__item"><a class="js-anchorLink" href="#topReview">お客様の声</a></li>
-        <li class="footer__link-list__item"><a class="js-anchorLink" href="#topBlog">ブログ</a></li>
-        <li class="footer__link-list__item"><a class="js-anchorLink" href="#topContact">サロン情報</a></li>
+        <li class="footer__link-list__item"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topMessage' : home_url("#topMessage"); ?>">メッセージ</a></li>
+        <li class="footer__link-list__item"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topFeatures' : home_url("#topFeatures"); ?>">3つの特徴</a></li>
+        <li class="footer__link-list__item"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topMenu' : home_url("#topMenu"); ?>">メニュー</a></li>
+        <li class="footer__link-list__item"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topReview' : home_url("#topReview"); ?>">お客様の声</a></li>
+        <li class="footer__link-list__item"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topBlog' : home_url("#topBlog"); ?>">ブログ</a></li>
+        <li class="footer__link-list__item"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topContact' : home_url("#topContact"); ?>">サロン情報</a></li>
       </ul>
     </div>
     <div class="text-center text-sm">&copy;2023 <?= get_option('company_name'); ?></div>

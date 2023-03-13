@@ -25,12 +25,12 @@
       <div class="hidden lg:block">
         <nav>
           <ul class="flex">
-            <li class="px-2 text-sm"><a class="js-anchorLink" href="#topMessage">メッセージ</a></li>
-            <li class="px-2 text-sm"><a class="js-anchorLink" href="#topFeatures">3つの特徴</a></li>
-            <li class="px-2 text-sm"><a class="js-anchorLink" href="#topMenu">メニュー</a></li>
-            <li class="px-2 text-sm"><a class="js-anchorLink" href="#topReview">お客様の声</a></li>
-            <li class="px-2 text-sm"><a class="js-anchorLink" href="#topBlog">ブログ</a></li>
-            <li class="px-2 text-sm"><a class="js-anchorLink" href="#topContact">サロン情報</a></li>
+            <li class="px-2 text-sm"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topMessage' : home_url("#topMessage"); ?>">メッセージ</a></li>
+            <li class="px-2 text-sm"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topFeatures' : home_url("#topFeatures"); ?>">3つの特徴</a></li>
+            <li class="px-2 text-sm"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topMenu' : home_url("#topMenu"); ?>">メニュー</a></li>
+            <li class="px-2 text-sm"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topReview' : home_url("#topReview"); ?>">お客様の声</a></li>
+            <li class="px-2 text-sm"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topBlog' : home_url("#topBlog"); ?>">ブログ</a></li>
+            <li class="px-2 text-sm"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topContact' : home_url("#topContact"); ?>">サロン情報</a></li>
           </ul>
         </nav>
       </div>
@@ -53,12 +53,12 @@
       </button>
       <nav class="mb-4">
         <ul>
-          <li class="px-2 text-sm text-center"><a class="js-anchorLink js-menu-button" href="#topMessage">メッセージ</a></li>
-          <li class="px-2 text-sm text-center"><a class="js-anchorLink js-menu-button" href="#topFeatures">3つの特徴</a></li>
-          <li class="px-2 text-sm text-center"><a class="js-anchorLink js-menu-button" href="#topMenu">メニュー</a></li>
-          <li class="px-2 text-sm text-center"><a class="js-anchorLink js-menu-button" href="#topReview">お客様の声</a></li>
-          <li class="px-2 text-sm text-center"><a class="js-anchorLink js-menu-button" href="#topBlog">ブログ</a></li>
-          <li class="px-2 text-sm text-center"><a class="js-anchorLink js-menu-button" href="#topContact">サロン情報</a></li>
+          <li class="px-2 text-sm text-center"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?> js-menu-button" href="<?= is_front_page() ? '#topMessage' : home_url("#topMessage"); ?>">メッセージ</a></li>
+          <li class="px-2 text-sm text-center"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?> js-menu-button" href="<?= is_front_page() ? '#topFeatures' : home_url("#topFeatures"); ?>">3つの特徴</a></li>
+          <li class="px-2 text-sm text-center"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?> js-menu-button" href="<?= is_front_page() ? '#topMenu' : home_url("#topMenu"); ?>">メニュー</a></li>
+          <li class="px-2 text-sm text-center"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?> js-menu-button" href="<?= is_front_page() ? '#topReview' : home_url("#topReview"); ?>">お客様の声</a></li>
+          <li class="px-2 text-sm text-center"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?> js-menu-button" href="<?= is_front_page() ? '#topBlog' : home_url("#topBlog"); ?>">ブログ</a></li>
+          <li class="px-2 text-sm text-center"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?> js-menu-button" href="<?= is_front_page() ? '#topContact' : home_url("#topContact"); ?>">サロン情報</a></li>
         </ul>
       </nav>
       <div class="text-center">
