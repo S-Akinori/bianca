@@ -30,7 +30,7 @@
       <img src="<?= get_option('top_fv_image3') ;?>" alt="<?= get_option('top_fv_text') ;?>" />
     </div>
     <div class="c-fv__text-container">
-      <div class="c-fv__text-container__title"><?= get_option('top_fv_text') ;?></div>  
+      <h1 class="c-fv__text-container__title"><?= get_option('top_fv_text') ;?></h1>  
     </div>
     <div class="p-top-fv__owner">
       <div class="p-top-fv__owner__image">
@@ -166,7 +166,7 @@
           </div>
         </div>
         <div class="bg-main2 c-fade-in">
-          <?php foreach($posts as $post): setup_postdata($post); ?>
+          <?php if($posts): foreach($posts as $post): setup_postdata($post); ?>
           <div class="p-4">
             <a href="<?php the_permalink() ?>" class="flex">
               <div class="w-32 aspect-video">
@@ -179,6 +179,9 @@
             </a>
           </div>
           <?php endforeach; wp_reset_postdata(); ?>
+          <?php else: ?>
+            <p class="p-4">投稿がありません。</p>
+          <?php endif; ?>
         </div>
       </section>
     </div>
