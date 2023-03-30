@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aesthetic Salon NEXUS</title>
+  <meta property="title" content="Aesthetic Salon NEXUS" />
+  <meta property="description" content="エステティックサロンNEXUSではオールハンドによる施術を行っております。フェイシャルやボディの施術をはじめ、美容脱毛も行っております。" />
   <meta property="og:title" content="Aesthetic Salon NEXUS" />
   <meta property="og:description" content="エステティックサロンNEXUSではオールハンドによる施術を行っております。フェイシャルやボディの施術をはじめ、美容脱毛も行っております。" />
   <meta property="og:type" content="website" />
