@@ -131,6 +131,8 @@
             $menu_args = array(
               'numberposts' => -1,
               'post_type' => 'menus',
+              'order' => 'ASC',
+              'orderby' => 'date',
               'tax_query' => array(
                 array(
                   'taxonomy' => 'menus-cat',
