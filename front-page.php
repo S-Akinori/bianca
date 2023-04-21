@@ -129,6 +129,7 @@
         <ul class="c-list md:flex flex-wrap">
           <?php 
             $menu_args = array(
+              'numberposts' => -1,
               'post_type' => 'menus',
               'tax_query' => array(
                 array(
