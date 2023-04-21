@@ -126,7 +126,7 @@
       </div>
       <div>
         <h3>お得なセットメニュー</h3>
-        <ul class="c-list md:flex flex-wrap justify-between">
+        <ul class="c-list md:flex flex-wrap">
           <?php 
             $menu_args = array(
               'post_type' => 'menus',
@@ -142,7 +142,7 @@
             foreach($menu_posts as $post):
             setup_postdata($post);
           ?>
-            <li class="c-list__item c-list__item--main-light flex justify-between md:w-[49%]"><span><?php the_title(); ?></span> <span><?php the_field('price'); ?></span></li>
+            <li class="c-list__item c-list__item--main-light flex justify-between w-full"><span><?php the_title(); ?></span> <span><?php the_field('price'); ?></span></li>
           <?php endforeach; wp_reset_postdata(); ?>
         </ul>
       </div>
