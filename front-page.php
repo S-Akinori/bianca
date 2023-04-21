@@ -93,7 +93,7 @@
         </div>
       </div>
       <div>
-        <?php foreach($menu_categories as $category): $category_image = get_term_meta($category->term_id, 'category-image', true); ?>
+        <?php foreach($menu_categories as $category): if($category->slug !== 'set-menu'): $category_image = get_term_meta($category->term_id, 'category-image', true); ?>
           <div class="md:flex mb-12 c-fade-in">
             <div class="md:w-1/2">
               <img src="<?= $category_image; ?>" alt="<?= $category->name; ?>">
@@ -122,7 +122,29 @@
               </ul>
             </div>
           </div>
-        <?php endforeach; ?>
+        <?php endif; endforeach; ?>
+      </div>
+      <div>
+        <h3>お得なセットメニュー</h3>
+        <ul class="c-list md:flex flex-wrap justify-between">
+          <?php 
+            $menu_args = array(
+              'post_type' => 'menus',
+              'tax_query' => array(
+                array(
+                  'taxonomy' => 'menus-cat',
+                  'field'=>'slug',
+                  'terms'=>'set-menu', 
+                )
+              )
+            );
+            $menu_posts = get_posts($menu_args);
+            foreach($menu_posts as $post):
+            setup_postdata($post);
+          ?>
+            <li class="c-list__item c-list__item--main-light flex justify-between md:w-[49%]"><span><?php the_title(); ?></span> <span><?php the_field('price'); ?></span></li>
+          <?php endforeach; wp_reset_postdata(); ?>
+        </ul>
       </div>
     </section>
   </div>
