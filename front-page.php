@@ -96,6 +96,7 @@
               <ul class="c-list">
                 <?php 
                   $menu_args = array(
+                    'numberposts' => -1, //全ての記事を取得
                     'post_type' => 'menus',
                     'order' => 'ASC',
                     'orderby' => 'date',
