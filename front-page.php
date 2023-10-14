@@ -156,26 +156,36 @@
         <div class="md:w-1/2 md:px-4">
           <h3 class="text-main"><?= get_option('company_name'); ?></h3>
           <div>
+            <?php if(get_option('company_CEO')) : ?>
             <div class="md:flex mb-4 pb-4 border-b border-main2">
               <div class="w-32 pr-4"><?= get_option('company_CEO_title'); ?></div>
               <div class="whitespace-pre-wrap"><?= get_option('company_CEO'); ?></div>
             </div>
+            <?php endif; ?>
+            <?php if(get_option('company_tel')) : ?>
             <div class="md:flex mb-4 pb-4 border-b border-main2">
               <div class="w-32 pr-4"><?= get_option('company_tel_title'); ?></div>
               <div class="whitespace-pre-wrap"><?= get_option('company_tel'); ?></div>
             </div>
+            <?php endif; ?>
+            <?php if(get_option('company_address')) : ?>
             <div class="md:flex mb-4 pb-4 border-b border-main2">
               <div class="w-32 pr-4"><?= get_option('company_address_title'); ?></div>
               <div class="whitespace-pre-wrap"><?= get_option('company_address'); ?></div>
             </div>
+            <?php endif; ?>
+            <?php if(get_option('company_hours')) : ?>
             <div class="md:flex mb-4 pb-4 border-b border-main2">
               <div class="w-32 pr-4"><?= get_option('company_hours_title'); ?></div>
               <div class="whitespace-pre-wrap"><?= get_option('company_hours'); ?></div>
             </div>
+            <?php endif; ?>
+            <?php if(get_option('company_dayoff')) : ?>
             <div class="md:flex mb-4 pb-4 border-b border-main2">
               <div class="w-32 pr-4"><?= get_option('company_dayoff_title'); ?></div>
               <div class="whitespace-pre-wrap"><?= get_option('company_dayoff'); ?></div>
             </div>
+            <?php endif; ?>
           </div>
           <div class="text-sm">
             <?= get_option('company_info_sub'); ?>

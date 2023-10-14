@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aesthetic Salon NEXUS</title>
-  <meta name="title" content="Aesthetic Salon NEXUS" />
-  <meta name="description" content="エステティックサロンNEXUSではオールハンドによる施術を行っております。フェイシャルやボディの施術をはじめ、美容脱毛も行っております。" />
-  <meta property="og:title" content="Aesthetic Salon NEXUS" />
+  <title>BIANCA 麻布</title>
+  <meta name="title" content="BIANCA 麻布" />
+  <meta name="description" content="BIANCA麻布では美を追求する。貴方への癒しを私たちが叶えます" />
+  <meta property="og:title" content="BIANCA 麻布" />
   <meta property="og:description" content="エステティックサロンNEXUSではオールハンドによる施術を行っております。フェイシャルやボディの施術をはじめ、美容脱毛も行っております。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="<?php home_url(); ?>" />
   <meta property="og:image" content="<?= get_template_directory_uri(); ?>/image.png" />
-  <meta property="og:site_name" content="Aesthetic Salon NEXUS" />
+  <meta property="og:site_name" content="BIANCA 麻布" />
   <meta property="og:locale" content="ja_JP"  />
   <!-- <link rel="icon" href="/favicon.ico" /> -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -57,8 +57,7 @@
           <li class="px-2 text-sm text-center"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?> js-menu-button" href="<?= is_front_page() ? '#topMessage' : home_url("#topMessage"); ?>">メッセージ</a></li>
           <li class="px-2 text-sm text-center"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?> js-menu-button" href="<?= is_front_page() ? '#topFeatures' : home_url("#topFeatures"); ?>">3つの特徴</a></li>
           <li class="px-2 text-sm text-center"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?> js-menu-button" href="<?= is_front_page() ? '#topMenu' : home_url("#topMenu"); ?>">メニュー</a></li>
-          <li class="px-2 text-sm text-center"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?> js-menu-button" href="<?= is_front_page() ? '#topReview' : home_url("#topReview"); ?>">お客様の声</a></li>
-          <li class="px-2 text-sm text-center"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?> js-menu-button" href="<?= is_front_page() ? '#topBlog' : home_url("#topBlog"); ?>">ブログ</a></li>
+          <li class="px-2 text-sm text-center"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?> js-menu-button" href="<?= is_front_page() ? '#topNews' : home_url("#topNews"); ?>">ニュース</a></li>
           <li class="px-2 text-sm text-center"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?> js-menu-button" href="<?= is_front_page() ? '#topContact' : home_url("#topContact"); ?>">サロン情報</a></li>
         </ul>
       </nav>
