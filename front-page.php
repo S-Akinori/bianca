@@ -92,7 +92,7 @@
             </div>
             <div class="p-4 md:w-1/2 bg-main2">
               <div class="text-xl text-main mb-4"><?= $category->name; ?></div>
-              <div><?= $category->description; ?></div>
+              <div class="whitespace-pre-wrap"><?= $category->description; ?></div>
               <ul class="c-list">
                 <?php 
                   $menu_args = array(
