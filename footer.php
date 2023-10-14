@@ -7,7 +7,7 @@
 <footer class="footer">
   <div class="c-container mx-auto">
     <div class="footer__top">
-      <div class="c-logo mx-auto md:ml-0 md:mr-auto mb-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt=""></div>
+      <div class="c-logo mx-auto md:ml-0 md:mr-auto mb-4"><img src="<?= get_option('company_logo'); ?>" alt=""></div>
       <div class="text-center md:text-left whitespace-pre-wrap"><?= get_option('company_address'); ?></div>
     </div>
     <div>
@@ -15,8 +15,7 @@
         <li class="footer__link-list__item"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topMessage' : home_url("#topMessage"); ?>">メッセージ</a></li>
         <li class="footer__link-list__item"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topFeatures' : home_url("#topFeatures"); ?>">3つの特徴</a></li>
         <li class="footer__link-list__item"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topMenu' : home_url("#topMenu"); ?>">メニュー</a></li>
-        <li class="footer__link-list__item"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topReview' : home_url("#topReview"); ?>">お客様の声</a></li>
-        <li class="footer__link-list__item"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topBlog' : home_url("#topBlog"); ?>">ブログ</a></li>
+        <li class="footer__link-list__item"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topNews' : home_url("#topNews"); ?>">ニュース</a></li>
         <li class="footer__link-list__item"><a class="<?= is_front_page() ? 'js-anchorLink' : ''; ?>" href="<?= is_front_page() ? '#topContact' : home_url("#topContact"); ?>">サロン情報</a></li>
       </ul>
     </div>
