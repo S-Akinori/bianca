@@ -55,24 +55,30 @@
         </div>
       </div>
       <div class="p-top-features">
+        <?php if(get_option('top_feature1_image')): ?>
         <div class="p-top-features__item c-fade-in relative border-t border-b border-main2" style="background: url(<?= get_option('top_feature1_image'); ?>) no-repeat left center / cover;">
           <div class="p-top-features__item__inner md:w-1/2 ml-auto">
             <h3 class="p-top-features__item__inner__title"><?= get_option('top_feature1_title'); ?></h3>
             <?= get_option('top_feature1_text'); ?>
           </div>
         </div>
+        <?php endif; ?>
+        <?php if(get_option('top_feature2_image')): ?>
         <div class="p-top-features__item c-fade-in relative border-t border-b border-main2" style="background: url(<?= get_option('top_feature2_image'); ?>) no-repeat left center / cover;">
           <div class="p-top-features__item__inner md:w-1/2 ml-auto">
             <h3 class="p-top-features__item__inner__title"><?= get_option('top_feature2_title'); ?></h3>
             <?= get_option('top_feature2_text'); ?>
           </div>
         </div>
+        <?php endif; ?>
+        <?php if(get_option('top_feature3_image')): ?>
         <div class="p-top-features__item c-fade-in relative border-t border-b border-main2" style="background: url(<?= get_option('top_feature3_image'); ?>) no-repeat left center / cover;">
           <div class="p-top-features__item__inner md:w-1/2 ml-auto">
             <h3 class="p-top-features__item__inner__title"><?= get_option('top_feature3_title'); ?></h3>
             <?= get_option('top_feature3_text'); ?>
           </div>
         </div>
+        <?php endif; ?>
       </div>
     </section>
   </div>
